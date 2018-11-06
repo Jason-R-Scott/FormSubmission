@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
+
+    <style>
+        div {
+            width: 200px;
+            padding: 10px;
+
+        }
+
+        form input {
+            margin: 5px, 0px, 5px, 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    @model User
+    <div>
+        <form asp-action="Create" asp-controller="Home" method="post">
+            <span asp-validation-for="FirstName"></span>
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName">
+            <span asp-validation-for="LastName"></span>
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName">
+            <span asp-validation-for="Age"></span>
+            <label asp-for="Age"></label>
+            <input asp-for="Age">
+            
+            <span asp-validation-for="Email"></span>
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+            <span asp-validation-for="Password"></span>
+            <label asp-for="Password"></label>
+            <input asp-for="Password">
+            <br>
+            <br>
+            <input value="Add User" type="submit">    
+        </form>
+    </div>
+</body>
